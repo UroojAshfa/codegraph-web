@@ -54,7 +54,7 @@ export function Header() {
               Examples
             </Link>
             <a
-              href="https://github.com/UroojAshfa/codegraph"
+              href="https://github.com/UroojAshfa/codegraph-web"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-cyan-400 dark:hover:text-cg-electric transition-colors"
@@ -76,7 +76,7 @@ export function Header() {
 
             {/* GitHub Link */}
             <a
-              href="https://github.com/UroojAshfa/codegraph"
+              href="https://github.com/UroojAshfa/codegraph-web"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-900 dark:text-white bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-cyan-400 dark:hover:border-cyan-400 transition-colors"

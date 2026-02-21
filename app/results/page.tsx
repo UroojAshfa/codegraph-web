@@ -10,6 +10,7 @@ import { FunctionTable } from "@/components/results/functionTable";
 import { ExportButtons } from "@/components/results/exportButtons";
 import { ArrowLeft, Loader2 } from "lucide-react";
 import Link from "next/link";
+import { AnalyzeAllButton } from "@/components/results/analyzeAllButton";
 
 export default function ResultsPage() {
   const router = useRouter();
@@ -91,6 +92,10 @@ export default function ResultsPage() {
         {/* Chart */}
         <div className="mb-8">
           <ComplexityChart data={analysisData} />
+        </div>
+
+        <div className="mb-8">
+        <AnalyzeAllButton topFunctions={analysisData.complexity || []} />
         </div>
 
         {/* Function Table */}

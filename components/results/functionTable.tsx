@@ -158,7 +158,7 @@ export function FunctionTable({ data }: FunctionTableProps) {
                         className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-purple-600 dark:text-purple-400 bg-purple-100 dark:bg-purple-900/20 hover:bg-purple-200 dark:hover:bg-purple-900/40 rounded-lg transition-colors"
                         title="Get AI-powered insights"
                       >
-                        <Sparkles className="w-3 h-3" />
+                        {/* <Sparkles className="w-3 h-3" /> */}
                         <span className="hidden sm:inline">AI Insights</span>
                       </button>
                     </td>
