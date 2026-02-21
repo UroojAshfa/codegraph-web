@@ -7,7 +7,6 @@ import JavaScript from 'tree-sitter-javascript';
 import TypeScript from 'tree-sitter-typescript';
 import { CallGraph } from './graph';
 
-
 interface FunctionInfo {
   name: string;
   file: string;
