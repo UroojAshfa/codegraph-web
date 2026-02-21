@@ -8,7 +8,7 @@ import { FeatureGrid } from "@/components/landing/featureGrid";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 to-slate-100 dark:from-cg-charcoal dark:to-cg-charcoal-light">
+    <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900">
       <Header />
       
       <main className="flex-1 container mx-auto px-4 py-12 md:py-20">

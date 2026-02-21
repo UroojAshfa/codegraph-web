@@ -267,12 +267,11 @@ export async function POST(request: NextRequest) {
       fs.writeFileSync(path.join(tempDir, safeName), buffer);
     }
 
-    // ── Run your existing CLI ──────────────────────────────────────────────────
-    // Update this path to where your codegraph project lives!
+ 
+    
     const codegraphDir = 'D:\\codegraph';
 
-    // CLI saves output.json to wherever you run it from
-    // We run it from codegraphDir so we know exactly where output.json goes
+    
     execSync(
       `node "${codegraphDir}\\dist\\cli.js" analyze "${tempDir}"`,
       {
@@ -322,12 +321,11 @@ export async function POST(request: NextRequest) {
 function transformOutput(cliOutput: CLIOutput, fileCount: number) {
   const { nodes, edges } = cliOutput;
 
-  // ── Filter to real functions only (remove built-in JS methods) ───────────────
+  // ── Filter to real functions only 
   const realNodes = nodes.filter(n => !BUILTIN_METHODS.has(n.id));
 
-  // ── Calculate complexity from call graph (out-degree proxy) ─────────────────
-  // Since your JSON doesn't include McCabe complexity scores,
-  // we estimate: base 1 + unique outgoing calls / 3
+  // ── Calculate complexity from call graph (out-degree proxy) 
+
   const outDegreeMap = new Map<string, number>();
   edges.forEach(e => {
     if (!BUILTIN_METHODS.has(e.from)) {
@@ -348,7 +346,7 @@ function transformOutput(cliOutput: CLIOutput, fileCount: number) {
     };
   });
 
-  // ── Stats ─────────────────────────────────────────────────────────────────────
+  // Stats
   const avgComplexity = complexity.length > 0
     ? complexity.reduce((sum, c) => sum + c.complexity, 0) / complexity.length
     : 0;
@@ -357,7 +355,7 @@ function transformOutput(cliOutput: CLIOutput, fileCount: number) {
     ? Math.max(...complexity.map(c => c.complexity))
     : 0;
 
-  // ── Complexity distribution ──────────────────────────────────────────────────
+  // Complexity distribution 
   const distribution = [
     { range: "1-5", count: 0, percentage: 0 },
     { range: "6-10", count: 0, percentage: 0 },
@@ -380,18 +378,18 @@ function transformOutput(cliOutput: CLIOutput, fileCount: number) {
       : 0;
   });
 
-  // ── Top complex ──────────────────────────────────────────────────────────────
+  // Top complex
   const topComplex = [...complexity]
     .sort((a, b) => b.complexity - a.complexity)
     .slice(0, 10);
 
-  // ── Entry points & leaves ────────────────────────────────────────────────────
+  // Entry points & leaves 
   const calledSet = new Set(edges.map(e => e.to));
   const callerSet = new Set(edges.map(e => e.from));
   const entryPoints = realNodes.filter(n => !calledSet.has(n.id)).length;
   const leafFunctions = realNodes.filter(n => !callerSet.has(n.id)).length;
 
-  // ── Unique files ─────────────────────────────────────────────────────────────
+  //  Unique files 
   const uniqueFiles = new Set(nodes.map(n => n.file));
 
   return {
