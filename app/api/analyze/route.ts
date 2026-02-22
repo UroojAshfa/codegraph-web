@@ -41,9 +41,9 @@ export async function POST(request: NextRequest) {
       fs.writeFileSync(path.join(tempDir, safeName), buffer);
     }
 
-    // Analyze using local CodeAnalyzer
+    // ✅ CORRECT: analyzeDirectory returns the graph
     const analyzer = new CodeAnalyzer();
-    analyzer.analyzeDirectory(tempDir);  // ✅ Only 1 argument
+    const graph = analyzer.analyzeDirectory(tempDir);
 
     // Get complexity data
     const complexity = analyzer.getComplexity();
@@ -80,59 +80,36 @@ export async function POST(request: NextRequest) {
         : 0;
     });
 
-    // Top complex functions
     const topComplex = [...complexity]
       .sort((a, b) => b.complexity - a.complexity)
       .slice(0, 10);
 
-    // Try to get graph data if analyzer exposes it
-    let nodes: any[] = [];
-    let edges: any[] = [];
-    let entryPoints = 0;
-    let leafFunctions = 0;
-    let circularDependencies: any[] = [];
+    // Get graph data
+    const nodes = graph.getAllNodes();
+    const edges = graph.getAllEdges();
+    
+    const calledSet = new Set(edges.map(e => e.to));
+    const callerSet = new Set(edges.map(e => e.from));
+    
+    const entryPoints = nodes.filter(n => !calledSet.has(n.id)).length;
+    const leafFunctions = nodes.filter(n => !callerSet.has(n.id)).length;
 
-    // Check if analyzer has a graph property
-    if ((analyzer as any).graph) {
-      const graph = (analyzer as any).graph;
-      nodes = graph.getAllNodes ? graph.getAllNodes() : [];
-      edges = graph.getAllEdges ? graph.getAllEdges() : [];
-      
-      if (nodes.length > 0 && edges.length > 0) {
-        const calledSet = new Set(edges.map((e: any) => e.to));
-        const callerSet = new Set(edges.map((e: any) => e.from));
-        
-        entryPoints = nodes.filter((n: any) => !calledSet.has(n.id)).length;
-        leafFunctions = nodes.filter((n: any) => !callerSet.has(n.id)).length;
-      }
-      
-      if (graph.getCircularDependencies) {
-        circularDependencies = graph.getCircularDependencies();
-      }
-    }
+    const circularDependencies = graph.getCircularDependencies();
 
     const result = {
-      fileCount: files.length,
+      fileCount: analyzer.getFileCount(),
       functionCount: complexity.length,
       avgComplexity: parseFloat(avgComplexity.toFixed(2)),
       maxComplexity,
-      functions: complexity.map(c => ({
-        name: c.name,
-        file: c.file,
-        line: c.line,
+      functions: nodes.map(n => ({
+        name: n.label,
+        file: n.file,
+        line: n.line,
       })),
       complexity,
-      graph: { 
-        nodes: nodes.map((n: any) => ({
-          id: n.id,
-          label: n.label || n.id,
-          file: n.file,
-          line: n.line,
-        })), 
-        edges 
-      },
-      imports: analyzer.getImports ? analyzer.getImports() : [],
-      exports: analyzer.getExports ? analyzer.getExports() : [],
+      graph: { nodes, edges },
+      imports: analyzer.getImports(),
+      exports: analyzer.getExports(),
       circularDependencies,
       distribution,
       topComplex,
@@ -152,7 +129,6 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   } finally {
-    // Cleanup temp directory
     if (tempDir && fs.existsSync(tempDir)) {
       try {
         fs.rmSync(tempDir, { recursive: true, force: true });
@@ -170,10 +146,6 @@ export async function GET() {
     version: "1.0.0",
   });
 }
-
-
-
-
 
 
 
