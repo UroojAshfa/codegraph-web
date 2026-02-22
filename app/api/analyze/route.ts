@@ -155,7 +155,6 @@
 
 
 // app/api/analyze/route.ts
-// Uses CodeGraph CLI as child process - avoids ALL tree-sitter native issues!
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
@@ -165,7 +164,6 @@ import * as path from "path";
 import * as os from "os";
 import { execSync } from "child_process";
 
-// Matches your CLI's output.json exactly
 interface CLINode {
   id: string;
   label: string;
@@ -185,7 +183,6 @@ interface CLIOutput {
   edges: CLIEdge[];
 }
 
-// Built-in JS methods to filter out (not real functions in your code)
 const BUILTIN_METHODS = new Set([
   'log', 'push', 'forEach', 'filter', 'map', 'childForFieldName',
   'includes', 'set', 'get', 'has', 'join', 'slice', 'sort', 'find',
@@ -194,9 +191,6 @@ const BUILTIN_METHODS = new Set([
   'values', 'entries', 'from', 'concat', 'indexOf', 'repeat',
   'readFileSync', 'writeFileSync', 'existsSync', 'readdirSync',
   'statSync', 'parse', 'stringify', 'error', 'warn', 'info',
-  'charAt', 'substring', 'toUpperCase', 'toLowerCase', 'toISOString',
-  'toLocaleString', 'parseInt', 'parseFloat', 'isDirectory', 'isFile',
-  'setTimeout', 'clearTimeout', 'setInterval', 'clearInterval',
 ]);
 
 export async function POST(request: NextRequest) {
@@ -213,14 +207,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (files.length > 100) {
-      return NextResponse.json(
-        { success: false, error: "Maximum 100 files allowed" },
-        { status: 400 }
-      );
-    }
-
-    // Write uploaded files to temp directory
     tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "codegraph-"));
 
     for (const file of files) {
@@ -230,33 +216,25 @@ export async function POST(request: NextRequest) {
       fs.writeFileSync(path.join(tempDir, safeName), buffer);
     }
 
- 
-    
-    const codegraphDir = 'D:\\codegraph';
-
+    const projectRoot = process.cwd();
+    const codegraphDir = path.join(projectRoot, 'codegraph-cli');
     
     execSync(
-      `node "${codegraphDir}\\dist\\cli.js" analyze "${tempDir}"`,
+      `node "${path.join(codegraphDir, 'dist', 'cli.js')}" analyze "${tempDir}"`,
       {
         timeout: 30000,
-        cwd: codegraphDir,  // output.json saves here
+        cwd: codegraphDir,
       }
     );
 
-    // Read the output.json the CLI generated
     const jsonPath = path.join(codegraphDir, 'output.json');
 
     if (!fs.existsSync(jsonPath)) {
-      throw new Error(
-        `CLI ran but output.json not found at ${jsonPath}. ` +
-        `Check that your codegraph path is correct.`
-      );
+      throw new Error(`CLI output not found at ${jsonPath}`);
     }
 
     const rawOutput = fs.readFileSync(jsonPath, 'utf-8');
     const cliOutput: CLIOutput = JSON.parse(rawOutput);
-
-    // Transform into web app format
     const result = transformOutput(cliOutput, files.length);
 
     return NextResponse.json({ success: true, data: result });
@@ -272,22 +250,14 @@ export async function POST(request: NextRequest) {
     );
   } finally {
     if (tempDir && fs.existsSync(tempDir)) {
-      try {
-        fs.rmSync(tempDir, { recursive: true, force: true });
-      } catch (e) {
-        console.error("Cleanup failed:", e);
-      }
+      fs.rmSync(tempDir, { recursive: true, force: true });
     }
   }
 }
 
 function transformOutput(cliOutput: CLIOutput, fileCount: number) {
   const { nodes, edges } = cliOutput;
-
-  // ── Filter to real functions only 
   const realNodes = nodes.filter(n => !BUILTIN_METHODS.has(n.id));
-
-  // ── Calculate complexity from call graph (out-degree proxy) 
 
   const outDegreeMap = new Map<string, number>();
   edges.forEach(e => {
@@ -309,7 +279,6 @@ function transformOutput(cliOutput: CLIOutput, fileCount: number) {
     };
   });
 
-  // Stats
   const avgComplexity = complexity.length > 0
     ? complexity.reduce((sum, c) => sum + c.complexity, 0) / complexity.length
     : 0;
@@ -318,7 +287,6 @@ function transformOutput(cliOutput: CLIOutput, fileCount: number) {
     ? Math.max(...complexity.map(c => c.complexity))
     : 0;
 
-  // Complexity distribution 
   const distribution = [
     { range: "1-5", count: 0, percentage: 0 },
     { range: "6-10", count: 0, percentage: 0 },
@@ -341,18 +309,15 @@ function transformOutput(cliOutput: CLIOutput, fileCount: number) {
       : 0;
   });
 
-  // Top complex
   const topComplex = [...complexity]
     .sort((a, b) => b.complexity - a.complexity)
     .slice(0, 10);
 
-  // Entry points & leaves 
   const calledSet = new Set(edges.map(e => e.to));
   const callerSet = new Set(edges.map(e => e.from));
   const entryPoints = realNodes.filter(n => !calledSet.has(n.id)).length;
   const leafFunctions = realNodes.filter(n => !callerSet.has(n.id)).length;
 
-  //  Unique files 
   const uniqueFiles = new Set(nodes.map(n => n.file));
 
   return {
