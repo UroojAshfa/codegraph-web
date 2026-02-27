@@ -1,0 +1,954 @@
+{
+  "nodes": [
+    {
+      "id": "AIService.constructor",
+      "label": "AIService.constructor",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 8
+    },
+    {
+      "id": "AIService.explainFunction",
+      "label": "AIService.explainFunction",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 15
+    },
+    {
+      "id": "AIService.analyzeComplexity",
+      "label": "AIService.analyzeComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 57
+    },
+    {
+      "id": "AIService.suggestRefactoring",
+      "label": "AIService.suggestRefactoring",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 85
+    },
+    {
+      "id": "AIService.detectCodeSmells",
+      "label": "AIService.detectCodeSmells",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 125
+    },
+    {
+      "id": "CodeAnalyzer.constructor",
+      "label": "CodeAnalyzer.constructor",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 60
+    },
+    {
+      "id": "CodeAnalyzer.findJSFiles",
+      "label": "CodeAnalyzer.findJSFiles",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 68
+    },
+    {
+      "id": "CodeAnalyzer.extractFunctions",
+      "label": "CodeAnalyzer.extractFunctions",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 94
+    },
+    {
+      "id": "visit",
+      "label": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 95
+    },
+    {
+      "id": "CodeAnalyzer.extractObjectMethods",
+      "label": "CodeAnalyzer.extractObjectMethods",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 245
+    },
+    {
+      "id": "CodeAnalyzer.extractCalls",
+      "label": "CodeAnalyzer.extractCalls",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 301
+    },
+    {
+      "id": "CodeAnalyzer.extractImportsExports",
+      "label": "CodeAnalyzer.extractImportsExports",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 418
+    },
+    {
+      "id": "CodeAnalyzer.analyzeFile",
+      "label": "CodeAnalyzer.analyzeFile",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 482
+    },
+    {
+      "id": "CodeAnalyzer.calculateComplexity",
+      "label": "CodeAnalyzer.calculateComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 499
+    },
+    {
+      "id": "CodeAnalyzer.analyzeDirectory",
+      "label": "CodeAnalyzer.analyzeDirectory",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 566
+    },
+    {
+      "id": "CodeAnalyzer.getFileCount",
+      "label": "CodeAnalyzer.getFileCount",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 603
+    },
+    {
+      "id": "CodeAnalyzer.getImports",
+      "label": "CodeAnalyzer.getImports",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 607
+    },
+    {
+      "id": "CodeAnalyzer.getExports",
+      "label": "CodeAnalyzer.getExports",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 611
+    },
+    {
+      "id": "CodeAnalyzer.getComplexity",
+      "label": "CodeAnalyzer.getComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 615
+    }
+  ],
+  "edges": [
+    {
+      "from": "AIService.constructor",
+      "to": "getGenerativeModel",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 10
+    },
+    {
+      "from": "AIService.explainFunction",
+      "to": "join",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 28
+    },
+    {
+      "from": "AIService.explainFunction",
+      "to": "join",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 29
+    },
+    {
+      "from": "AIService.explainFunction",
+      "to": "generateContent",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 49
+    },
+    {
+      "from": "AIService.explainFunction",
+      "to": "text",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 51
+    },
+    {
+      "from": "AIService.analyzeComplexity",
+      "to": "generateContent",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 77
+    },
+    {
+      "from": "AIService.analyzeComplexity",
+      "to": "text",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 79
+    },
+    {
+      "from": "AIService.suggestRefactoring",
+      "to": "generateContent",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 117
+    },
+    {
+      "from": "AIService.suggestRefactoring",
+      "to": "text",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 119
+    },
+    {
+      "from": "AIService.detectCodeSmells",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 135
+    },
+    {
+      "from": "AIService.detectCodeSmells",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 138
+    },
+    {
+      "from": "AIService.detectCodeSmells",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 141
+    },
+    {
+      "from": "AIService.detectCodeSmells",
+      "to": "join",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 150
+    },
+    {
+      "from": "AIService.detectCodeSmells",
+      "to": "map",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 150
+    },
+    {
+      "from": "AIService.detectCodeSmells",
+      "to": "generateContent",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 155
+    },
+    {
+      "from": "AIService.detectCodeSmells",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 157
+    },
+    {
+      "from": "AIService.detectCodeSmells",
+      "to": "text",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\ai.ts",
+      "line": 157
+    },
+    {
+      "from": "CodeAnalyzer.constructor",
+      "to": "setLanguage",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 62
+    },
+    {
+      "from": "CodeAnalyzer.constructor",
+      "to": "setLanguage",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 65
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "readdirSync",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 70
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "join",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 73
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "statSync",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 74
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "isDirectory",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 76
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "startsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 77
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 80
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "CodeAnalyzer.findJSFiles",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 80
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "endsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 82
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "endsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 83
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "endsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 84
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "endsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 85
+    },
+    {
+      "from": "CodeAnalyzer.findJSFiles",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 87
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 99
+    },
+    {
+      "from": "visit",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 101
+    },
+    {
+      "from": "visit",
+      "to": "CodeAnalyzer.calculateComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 106
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 112
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 113
+    },
+    {
+      "from": "visit",
+      "to": "add",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 121
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 132
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 133
+    },
+    {
+      "from": "visit",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 138
+    },
+    {
+      "from": "visit",
+      "to": "CodeAnalyzer.calculateComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 144
+    },
+    {
+      "from": "visit",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 149
+    },
+    {
+      "from": "visit",
+      "to": "CodeAnalyzer.calculateComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 154
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 161
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 162
+    },
+    {
+      "from": "visit",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 166
+    },
+    {
+      "from": "visit",
+      "to": "CodeAnalyzer.calculateComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 171
+    },
+    {
+      "from": "visit",
+      "to": "CodeAnalyzer.extractObjectMethods",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 178
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 184
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 191
+    },
+    {
+      "from": "visit",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 202
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 208
+    },
+    {
+      "from": "visit",
+      "to": "CodeAnalyzer.calculateComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 209
+    },
+    {
+      "from": "visit",
+      "to": "CodeAnalyzer.extractObjectMethods",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 231
+    },
+    {
+      "from": "visit",
+      "to": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 237
+    },
+    {
+      "from": "visit",
+      "to": "child",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 237
+    },
+    {
+      "from": "CodeAnalyzer.extractFunctions",
+      "to": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 241
+    },
+    {
+      "from": "CodeAnalyzer.extractObjectMethods",
+      "to": "child",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 247
+    },
+    {
+      "from": "CodeAnalyzer.extractObjectMethods",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 252
+    },
+    {
+      "from": "CodeAnalyzer.extractObjectMethods",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 256
+    },
+    {
+      "from": "CodeAnalyzer.extractObjectMethods",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 263
+    },
+    {
+      "from": "CodeAnalyzer.extractObjectMethods",
+      "to": "CodeAnalyzer.calculateComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 264
+    },
+    {
+      "from": "CodeAnalyzer.extractObjectMethods",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 271
+    },
+    {
+      "from": "CodeAnalyzer.extractObjectMethods",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 272
+    },
+    {
+      "from": "CodeAnalyzer.extractObjectMethods",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 281
+    },
+    {
+      "from": "CodeAnalyzer.extractObjectMethods",
+      "to": "CodeAnalyzer.calculateComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 287
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 308
+    },
+    {
+      "from": "visit",
+      "to": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 314
+    },
+    {
+      "from": "visit",
+      "to": "child",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 314
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 324
+    },
+    {
+      "from": "visit",
+      "to": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 330
+    },
+    {
+      "from": "visit",
+      "to": "child",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 330
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 340
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 341
+    },
+    {
+      "from": "visit",
+      "to": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 348
+    },
+    {
+      "from": "visit",
+      "to": "child",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 348
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 358
+    },
+    {
+      "from": "visit",
+      "to": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 364
+    },
+    {
+      "from": "visit",
+      "to": "child",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 364
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 374
+    },
+    {
+      "from": "visit",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 377
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 387
+    },
+    {
+      "from": "visit",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 389
+    },
+    {
+      "from": "visit",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 391
+    },
+    {
+      "from": "visit",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 398
+    },
+    {
+      "from": "visit",
+      "to": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 411
+    },
+    {
+      "from": "visit",
+      "to": "child",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 411
+    },
+    {
+      "from": "CodeAnalyzer.extractCalls",
+      "to": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 415
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "readFileSync",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 422
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "exec",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 427
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "startsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 429
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "startsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 429
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 430
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "exec",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 436
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "startsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 438
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "startsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 438
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 439
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "includes",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 444
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "exec",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 446
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 447
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "exec",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 451
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 452
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "includes",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 455
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 456
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "includes",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 461
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "includes",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 461
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 462
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 466
+    },
+    {
+      "from": "CodeAnalyzer.extractImportsExports",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 474
+    },
+    {
+      "from": "CodeAnalyzer.analyzeFile",
+      "to": "readFileSync",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 484
+    },
+    {
+      "from": "CodeAnalyzer.analyzeFile",
+      "to": "endsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 486
+    },
+    {
+      "from": "CodeAnalyzer.analyzeFile",
+      "to": "endsWith",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 486
+    },
+    {
+      "from": "CodeAnalyzer.analyzeFile",
+      "to": "parse",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 489
+    },
+    {
+      "from": "CodeAnalyzer.analyzeFile",
+      "to": "CodeAnalyzer.extractFunctions",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 491
+    },
+    {
+      "from": "CodeAnalyzer.analyzeFile",
+      "to": "CodeAnalyzer.extractCalls",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 492
+    },
+    {
+      "from": "CodeAnalyzer.analyzeFile",
+      "to": "CodeAnalyzer.extractImportsExports",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 493
+    },
+    {
+      "from": "CodeAnalyzer.analyzeFile",
+      "to": "error",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 495
+    },
+    {
+      "from": "CodeAnalyzer.calculateComplexity",
+      "to": "childForFieldName",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 505
+    },
+    {
+      "from": "CodeAnalyzer.calculateComplexity",
+      "to": "child",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 508
+    },
+    {
+      "from": "visit",
+      "to": "includes",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 543
+    },
+    {
+      "from": "visit",
+      "to": "includes",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 543
+    },
+    {
+      "from": "visit",
+      "to": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 550
+    },
+    {
+      "from": "visit",
+      "to": "child",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 550
+    },
+    {
+      "from": "CodeAnalyzer.calculateComplexity",
+      "to": "visit",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 554
+    },
+    {
+      "from": "CodeAnalyzer.calculateComplexity",
+      "to": "push",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 556
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "CodeAnalyzer.findJSFiles",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 567
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "forEach",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 570
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "CodeAnalyzer.analyzeFile",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 570
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "forEach",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 574
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "warn",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 576
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "addNode",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 579
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "forEach",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 582
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "warn",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 584
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "addEdge",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 587
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "forEach",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 590
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "forEach",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 591
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "addDependency",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 592
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "forEach",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 596
+    },
+    {
+      "from": "CodeAnalyzer.analyzeDirectory",
+      "to": "addComplexity",
+      "file": "C:\\Users\\Home\\AppData\\Local\\Temp\\codegraph-vkDQJR\\analyzer.ts",
+      "line": 597
+    }
+  ]
+}

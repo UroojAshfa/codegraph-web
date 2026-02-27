@@ -1,125 +1,125 @@
 
-const handlers = {
-    valid: true,
+// const handlers = {
+//     valid: true,
   
 
-    onClick() {
-      console.log('clicked');
-    },
-  
-   
-    onSubmit(this: { valid: boolean }) {
-      if (this.valid) {
-        console.log('submitted');
-      }
-    },
-  
-
-    validate() {
-      return true;
-    }
-  };
-  
-
-  // TEST 2: Object literal with traditional function
-
-  const utils = {
-    
-    formatDate: function (date: Date) {
-      return date.toISOString();
-    },
+//     onClick() {
+//       console.log('clicked');
+//     },
   
    
-    parseJSON: function (str: string) {
-      try {
-        return JSON.parse(str);
-      } catch {
-        return null;
-      }
-    }
-  };
+//     onSubmit(this: { valid: boolean }) {
+//       if (this.valid) {
+//         console.log('submitted');
+//       }
+//     },
+  
 
-  // TEST 3: Object literal with arrow functions
+//     validate() {
+//       return true;
+//     }
+//   };
+  
 
-  const callbacks = {
+//   // TEST 2: Object literal with traditional function
+
+//   const utils = {
+    
+//     formatDate: function (date: Date) {
+//       return date.toISOString();
+//     },
+  
    
-    onSuccess: () => {
-      console.log('success');
-    },
+//     parseJSON: function (str: string) {
+//       try {
+//         return JSON.parse(str);
+//       } catch {
+//         return null;
+//       }
+//     }
+//   };
+
+//   // TEST 3: Object literal with arrow functions
+
+//   const callbacks = {
+   
+//     onSuccess: () => {
+//       console.log('success');
+//     },
   
 
-    onError: (error: Error) => {
-      console.error(error);
-    }
-  };
+//     onError: (error: Error) => {
+//       console.error(error);
+//     }
+//   };
   
 
-  // TEST 4: Mixed object methods
+//   // TEST 4: Mixed object methods
 
-  const api = {
+//   const api = {
 
-    get(url: string) {
-      return fetch(url);
-    },
+//     get(url: string) {
+//       return fetch(url);
+//     },
   
 
-    post: function (url: string, data: unknown) {
-      return fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(data)
-      });
-    },
-  
-    
-    delete: (id: number) => {
-      return fetch(`/api/${id}`, { method: 'DELETE' });
-    }
-  };
-  
-
-  // TEST 5: Nested objects
-
-  const config = {
-    handlers: {
-
-      onClick() {
-        console.log('nested click');
-      }
-    },
+//     post: function (url: string, data: unknown) {
+//       return fetch(url, {
+//         method: 'POST',
+//         body: JSON.stringify(data)
+//       });
+//     },
   
     
-    init() {
-      console.log('initialized');
-    }
-  };
+//     delete: (id: number) => {
+//       return fetch(`/api/${id}`, { method: 'DELETE' });
+//     }
+//   };
+  
+
+//   // TEST 5: Nested objects
+
+//   const config = {
+//     handlers: {
+
+//       onClick() {
+//         console.log('nested click');
+//       }
+//     },
+  
+    
+//     init() {
+//       console.log('initialized');
+//     }
+//   };
   
   
-  // TEST 6: Object returned from function
+//   // TEST 6: Object returned from function
  
-  function createController() {
+//   function createController() {
     
-    return {
-      start() {
-        console.log('started');
-      },
-      stop() {
-        console.log('stopped');
-      }
-    };
-  }
+//     return {
+//       start() {
+//         console.log('started');
+//       },
+//       stop() {
+//         console.log('stopped');
+//       }
+//     };
+//   }
   
 
-  // TEST 7: Object passed as argument
+//   // TEST 7: Object passed as argument
 
-  declare const app: {
-    use(arg: unknown): void;
-  };
+//   declare const app: {
+//     use(arg: unknown): void;
+//   };
   
-  app.use({
+//   app.use({
 
-    middleware() {
-      console.log('middleware');
-    }
-  });
+//     middleware() {
+//       console.log('middleware');
+//     }
+//   });
   
   
