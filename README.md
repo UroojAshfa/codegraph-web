@@ -27,7 +27,7 @@ CodeGraph is a modern web application that analyzes your JavaScript and TypeScri
 
 ##  Demo
 
-![CodeGraph Interface](https://www.loom.com/share/4c7b4e6150b444b1a0213f41147943ec)
+[![Watch Demo](assets/demo.png)](https://www.loom.com/share/4c7b4e6150b444b1a0213f41147943ec)
 
 ### Key Features in Action:
 -  **Instant Analysis** - Upload → Results in <3 seconds
