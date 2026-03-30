@@ -27,7 +27,7 @@ CodeGraph is a modern web application that analyzes your JavaScript and TypeScri
 
 ##  Demo
 
-![CodeGraph Interface](docs/screenshots/demo.png)
+![CodeGraph Interface](https://www.loom.com/share/4c7b4e6150b444b1a0213f41147943ec)
 
 ### Key Features in Action:
 -  **Instant Analysis** - Upload → Results in <3 seconds
@@ -200,7 +200,7 @@ Get your free Gemini API key: https://makersuite.google.com/app/apikey
 - **Rate Limit:** ~60 requests/minute (free tier)
 - **Cache Duration:** 24 hours
 - **Batch Analysis:** Top 5 functions
-- **Cost:** ~$0.001 per analysis (free tier available)
+
 
 ---
 
